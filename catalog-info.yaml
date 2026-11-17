@@ -1,0 +1,20 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: payments-api
+  title: Payments Api
+  description: Payment authorization and payment status API for Buildin10.
+  annotations:
+    github.com/project-slug: buildin10/payments-api
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-label-selector: 'app.kubernetes.io/name=payments-api'
+spec:
+  type: service
+  lifecycle: production
+  owner: team-payments
+  system: checkout
+  providesApis:
+    - payments-rest
+  dependsOn:
+    - resource:default/payments-db
+

@@ -1,0 +1,7 @@
+site_name: payments-api
+site_description: Operations runbook for payments-api
+nav:
+  - Overview: index.md
+  - Runbook: runbook.md
+plugins:
+  - techdocs-core

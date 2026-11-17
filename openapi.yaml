@@ -1,0 +1,26 @@
+openapi: 3.0.3
+info:
+  title: payments-rest
+  version: 1.0.0
+  description: HTTP interface for payments-api.
+servers:
+  - url: http://payments-api.buildin10.svc.cluster.local:8080
+paths:
+  /:
+    get:
+      summary: Service metadata
+      responses:
+        '200':
+          description: Service is responding
+  /healthz:
+    get:
+      summary: Liveness probe
+      responses:
+        '200':
+          description: Service is healthy
+  /readyz:
+    get:
+      summary: Readiness probe
+      responses:
+        '200':
+          description: Service is ready
